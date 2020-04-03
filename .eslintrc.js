@@ -20,5 +20,21 @@ module.exports = {
     'no-param-reassign': 'off',
     camelcase: 'off',
     'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
+    },
   },
 };
